@@ -3,7 +3,7 @@ import { Course } from './Course';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-course-list',
+ // selector: 'app-course-list',
   templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.css']
 })

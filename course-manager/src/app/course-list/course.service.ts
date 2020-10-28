@@ -6,9 +6,22 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
   })
 export class CourseService{
-  retrieveAll(): Course[]{
-    return COURSES;
-  }
+
+  // MÉTODO PARA EDITAR O CURSO SELECIONADO
+   retrieveAll(): Course[] {
+     return COURSES;
+   }
+   retrieveById(id: number): Course {
+    return COURSES.find((courseIterator: Course) => courseIterator.id === id);
+
+   }
+   save(course: Course){
+     if(course.id){
+       const index = COURSES.findIndex((courseIterator: Course ) => courseIterator.id === course.id);
+       COURSES[index] = course;
+     }
+
+   }
 
 }
 

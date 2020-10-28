@@ -10,13 +10,14 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Id: </th>
-      <th> Name:</th>
-      <th>ImageUrl: </th>
-      <th>Price:</th>
-      <th>Code:</th>
-      <th>Rating:</th>
-      <th>Options:</th>
+      <th>Id</th>
+      <th> Name</th>
+      <th>ImageUrl</th>
+      <th>Price</th>
+      <th>Code</th>
+      <th>Release Date</th>
+      <th>Rating</th>
+      <th>Options</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +31,9 @@
       <td>
         <app-star [rating]= "course.rating"></app-star>
       </td>
-      <td></td>
+      <td>
+        <a [routerLink]="['/courses/info', course.id]" class="btn btn-primary mr-2">Edit</a>
+      </td>
       </tr>
   </tbody>
 </table>

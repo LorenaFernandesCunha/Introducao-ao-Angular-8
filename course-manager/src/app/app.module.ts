@@ -8,6 +8,7 @@ import { StarComponent } from './star/star.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
+import { CourseInfoComponent } from './course-info/course-info.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ErrorComponent } from './error/error.component';
     StarComponent,
     ReplacePipe,
     NavBarComponent,
-    ErrorComponent
+    ErrorComponent,
+    CourseInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { ErrorComponent } from './error/error.component';
     RouterModule.forRoot([
       {path: '', redirectTo: 'courses', pathMatch: 'full'},
       {path: 'courses', component: CourseListComponent},
+      {path: 'courses/info/:id', component: CourseInfoComponent},
       {path: '**', component: ErrorComponent}
     ])
   ],

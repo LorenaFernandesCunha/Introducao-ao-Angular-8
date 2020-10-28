@@ -5,12 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorComponent } from './error/error.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ErrorComponent
+    AppComponent
 
   ],
   imports: [
@@ -19,8 +18,7 @@ import { ErrorComponent } from './error/error.component';
     CourseModule,
     CoreModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: 'courses', pathMatch: 'full'},
-      {path: '**', component: ErrorComponent}
+      {path: '', redirectTo: 'courses', pathMatch: 'full'}
     ])
   ],
   providers: [],

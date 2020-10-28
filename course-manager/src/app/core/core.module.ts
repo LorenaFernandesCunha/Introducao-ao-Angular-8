@@ -1,3 +1,4 @@
+import { ErrorComponent } from './component/error/error.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 
 import { NgModule } from '@angular/core';
@@ -6,10 +7,13 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    NavBarComponent
+    NavBarComponent,
+    ErrorComponent
 ],
 imports: [
-  RouterModule
+  RouterModule.forChild([
+    {path: '**', component: ErrorComponent}
+  ])
 ],
 exports: [
   NavBarComponent
